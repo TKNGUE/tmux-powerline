@@ -22,14 +22,14 @@ run_segment() {
 	TXDIF=$(echo "$((TXBN - TXB)) / 1024 / ${sleeptime}" | bc )
 
 	if [ $RXDIF -gt 1024 ]; then
-		RXDIF_ECHO="↓ $(echo "scale=1;${RXDIF} / 1024" | bc)M/s"
+		RXDIF_ECHO="D:$(echo "scale=1;${RXDIF} / 1024" | bc)M/s"
 	else
-		RXDIF_ECHO="↓ ${RXDIF}K/s"
+		RXDIF_ECHO="D:${RXDIF}K/s"
 	fi
 	if [ $TXDIF -gt 1024 ]; then
-		TXDIF_ECHO="↑ $(echo "scale=1;${TXDIF} / 1024" | bc)M/s"
+		TXDIF_ECHO="U: $(echo "scale=1;${TXDIF} / 1024" | bc)M/s"
 	else
-		TXDIF_ECHO="↑ ${TXDIF}K/s"
+		TXDIF_ECHO="U: ${TXDIF}K/s"
 	fi
 
 	echo -e "${RXDIF_ECHO} ${TXDIF_ECHO}"

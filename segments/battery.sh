@@ -5,8 +5,8 @@
 TMUX_POWERLINE_SEG_BATTERY_TYPE_DEFAULT="percentage"
 TMUX_POWERLINE_SEG_BATTERY_NUM_HEARTS_DEFAULT=5
 
-HEART_FULL="♥"
-HEART_EMPTY="♡"
+HEART_FULL="B"
+HEART_EMPTY="E"
 
 generate_segmentrc() {
   read -d '' rccontents  << EORC
@@ -29,7 +29,7 @@ run_segment() {
 
   case "$TMUX_POWERLINE_SEG_BATTERY_TYPE" in
     "percentage")
-      output="${HEART_FULL} ${battery_status}%"
+      output="${HEART_FULL}:${battery_status}%"
       ;;
     "cute")
       output=$(__cutinate $battery_status)

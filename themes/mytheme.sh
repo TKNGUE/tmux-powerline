@@ -37,7 +37,8 @@ if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
   TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
     "earthquake 3 0" \
     "wan_ip 24 255" \
-    "lan_ip 24 255 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+    # "lan_ip 24 255 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+    "wifi_signal_strength 24 255 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
     # "pwd 89 211" \
     "ifstat_sys 30 255" \
     # "mailcount 9 255" \
