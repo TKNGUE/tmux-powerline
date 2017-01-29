@@ -24,11 +24,13 @@ if [ -z $TMUX_POWERLINE_LEFT_STATUS_SEGMENTS ]; then
   TMUX_POWERLINE_LEFT_STATUS_SEGMENTS=(
     "tmux_session_info 148 234" \
     "hostname 33 0" \
+    "tmuxstate 50 0" \
     # "ifstat 30 255" \
     "vcs_branch 29 88" \
     "vcs_compare 60 255" \
     "vcs_staged 64 255" \
-    "vcs_modified 9 255" \
+    # "vcs_modified 9 255" \
+    "vcs_diff 33 255" \
     # "vcs_others 245 0" \
     )
 fi
